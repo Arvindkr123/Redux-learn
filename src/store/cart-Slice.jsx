@@ -14,7 +14,7 @@ const cartSlice = createSlice({
             if (!existingItem) {
                 // if item is not exist then add the new item
                 state.items.push({
-                    itemId: newItem.id,
+                    id: newItem.id,
                     price: newItem.price,
                     quantity: 1,
                     totalPrice: newItem.price,
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
                 existingItem.quantity--;
                 existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
             }
-        }
+        }   
     }
 })
 
